@@ -19,13 +19,16 @@ class Body extends StatelessWidget {
               SizedBox(
                 width: size.width / 2,
                 height: 84,
-                child: FlatButton(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(20),
+                child: TextButton(
+                  // Change FlatButton to TextButton
+                  style: TextButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(20),
+                      ),
                     ),
+                    backgroundColor: kPrimaryColor,
                   ),
-                  color: kPrimaryColor,
                   onPressed: () {},
                   child: Text(
                     "Buy Now",
@@ -37,7 +40,8 @@ class Body extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: FlatButton(
+                child: TextButton(
+                  // Change FlatButton to TextButton
                   onPressed: () {},
                   child: Text("Description"),
                 ),

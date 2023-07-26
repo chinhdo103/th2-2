@@ -5,7 +5,7 @@ import '../../../constants.dart';
 
 class RecomendsPlants extends StatelessWidget {
   const RecomendsPlants({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -57,17 +57,17 @@ class RecomendsPlants extends StatelessWidget {
 
 class RecomendPlantCard extends StatelessWidget {
   const RecomendPlantCard({
-    Key key,
-    this.image,
-    this.title,
-    this.country,
-    this.price,
-    this.press,
+    Key? key,
+    required this.image,
+    required this.title,
+    required this.country,
+    required this.price,
+    required this.press,
   }) : super(key: key);
 
   final String image, title, country;
   final int price;
-  final Function press;
+  final VoidCallback press;
 
   @override
   Widget build(BuildContext context) {
@@ -123,7 +123,7 @@ class RecomendPlantCard extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .button
-                        .copyWith(color: kPrimaryColor),
+                        ?.copyWith(color: kPrimaryColor),
                   )
                 ],
               ),
